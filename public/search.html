@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="https://oldwatch.jenildobaria.repl.co/light.png" id="dark">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GSJRJYKS0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2GSJRJYKS0');
+</script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="/js/index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+    <style>
+      body {
+        background: #121214;
+      }
+
+      .float-container {
+        display: inline-block;
+        padding-top: 40px;
+        color: white;
+        font-family: sans-serif;
+        font-size: 40px;
+      }
+
+      .float-child {
+        margin-left: 50px;
+        margin-right: 50px;
+        float: left;
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 20px;
+      }
+
+      .float-child img:hover {
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+      }
+
+      a {
+        text-decoration: none;
+        color: azure;
+      }
+      .discord-icon{
+    margin-left: 7px;
+    float: left;
+}
+.discord-icon:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+}
+.inputform{
+    display: inline-block;
+}
+
+
+input[type="text"]{
+    border-color: black;
+    height: 40px;
+    width: 300px;
+    float: left;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family:sans-serif;
+}
+#submitbutton{
+    border-color: black;
+    height: 45px;
+    width:50px;
+    float: left;
+    font-size: 20px;
+}
+
+#submitbutton:hover{
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+}
+    </style>
+  </head>
+  <body>
+    <center>
+    <div class="inputform">
+      <input type="text" id="searchinput" placeholder="Search">
+      <button type="button" id="submitbutton">🔎</button>
+      <img class="discord-icon" src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" width="52" height="40" alt="discord-icon" onclick="window.open('https:\/\/discord.gg/bqXhREHEDt')">
+      <img class="discord-icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png" alt="paypal-logo" width="41" height="40" onclick="window.open('https:\/\/paypal.me/donateagent')">
+    </div>
+  </center>
+    <div class="float-container"> {result} </div>
+  </body>
+</html>
