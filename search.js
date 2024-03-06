@@ -108,4 +108,4 @@ async function getURL2(id){
 
 }
 
-module.exports = {get, nameToImdbCheck, getURL, getURL2}
+module.exports = {get, getURL, getURL2}
