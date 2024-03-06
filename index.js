@@ -37,7 +37,7 @@ app.get("/search", (req, res) =>{
     let code = ""
     res.setHeader('Content-Type', "text/html")
     if(!searchTerm) return res.send(file.replace("{result}", "No Result Found (Use imdb id instead)"))
-    fetch("https://nnfr.jenildobaria.repl.co/api/search?q=" + searchTerm).then(g => g.json()).then(async g =>{
+    fetch("https://nnfr.onrender.com/api/search?q=" + searchTerm).then(g => g.json()).then(async g =>{
         if(!g) return res.send(file.replace("{result}", "No Result Found (Use imdb id instead)"))
         if(!g?.[0]) return res.send(file.replace("{result}", "No Result Found (Use imdb id instead)"))
         await g.forEach(x =>{
@@ -55,7 +55,7 @@ app.get("/play/:id", async(req,res) =>{
     const type = req.query.type
     let code = ""
     let script = ""
-    let url = "https://watch.jenildobaria.repl.co"
+    let url = "https://nnfr.onrender.com"
     const urlgen = await utils.getURL2(req.params.id)
 
     if(type == "manual"){
@@ -85,7 +85,7 @@ app.get("/play/:id", async(req,res) =>{
         code = `
         <iframe allowfullscreen frameborder="0" src="${urlgen}"></iframe>
         `
-        url = `https://watch.jenildobaria.repl.co/play/${req.params.id}`
+        url = `https://nnfr.onrender.com/play/${req.params.id}`
     }
     import("vimdb").then(g => {
         const imdb  = new g.default()
